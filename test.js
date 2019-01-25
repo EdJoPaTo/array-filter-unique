@@ -40,20 +40,3 @@ test('with selector', t => {
 		}
 	]);
 });
-
-test('with selector last', t => {
-	const result = testdata
-		.filter(arrayFilterUnique(o => o.id, true));
-	t.deepEqual(result, [
-		{
-			name: 'B',
-			id: 2
-		}, {
-			name: 'C',
-			id: 1
-		}, {
-			name: 'D',
-			id: 3
-		}
-	]);
-});

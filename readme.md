@@ -28,23 +28,13 @@ const arrayFilterUnique = require('array-filter-unique');
 
 ## API
 
-### arrayFilterUnique([selector], [last])
+### arrayFilterUnique([selector])
 
 #### selector
 
 Type: `item => string`
 
 Select what to check in the given item
-
-#### last
-
-Type: `boolean`<br>
-Default: `false`
-
-Use the last occurence of the matching item instead of the first one.
-
-Useful with sorted inputs.
-For example time sorted objects containing position and temperature when you want the latest temperature for each position.
 
 
 ## License

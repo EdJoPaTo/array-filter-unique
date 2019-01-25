@@ -1,16 +1,13 @@
 'use strict';
 
-// See: https://stackoverflow.com/questions/13486479/how-to-get-an-array-of-unique-values-from-an-array-containing-duplicates-in-java
-module.exports = function (selector = o => o, last = false) {
-	return (element, index, array) => {
-		const mapped = array
-			.map(selector);
+// See: https://jsperf.com/array-filter-unique/13
+module.exports = function (selector = o => o) {
+	const seen = {};
+	return element => {
 		const toBeSearched = selector(element);
 
-		if (last) {
-			return mapped.lastIndexOf(toBeSearched) === index;
-		}
-
-		return mapped.indexOf(toBeSearched) >= index;
+		const isNew = !(toBeSearched in seen);
+		seen[toBeSearched] = 1;
+		return isNew;
 	};
 };
