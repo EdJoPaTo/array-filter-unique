@@ -1,5 +1,5 @@
 import test from 'ava';
-import arrayFilterUnique from '.';
+import arrayFilterUnique from '../source';
 
 test('simple', t => {
 	const data = ['a', 'b', 'a', 'c'];
@@ -25,8 +25,7 @@ const testdata = [
 ];
 
 test('with selector', t => {
-	const result = testdata
-		.filter(arrayFilterUnique(o => o.id));
+	const result = testdata.filter(arrayFilterUnique(o => o.id));
 	t.deepEqual(result, [
 		{
 			name: 'A',
