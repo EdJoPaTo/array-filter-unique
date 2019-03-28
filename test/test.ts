@@ -1,11 +1,25 @@
 import test from 'ava';
 import arrayFilterUnique from '../source';
 
-test('simple', t => {
+test('simple strings', t => {
 	const data = ['a', 'b', 'a', 'c'];
 
 	const result = data.filter(arrayFilterUnique());
 	t.deepEqual(result, ['a', 'b', 'c']);
+});
+
+test('simple numbers', t => {
+	const data = [1, 2, 1, 3];
+
+	const result = data.filter(arrayFilterUnique());
+	t.deepEqual(result, [1, 2, 3]);
+});
+
+test('simple numbers with selector', t => {
+	const data = [1, 2, 1, 3];
+
+	const result = data.filter(arrayFilterUnique(o => o));
+	t.deepEqual(result, [1, 2, 3]);
 });
 
 const testdata = [
