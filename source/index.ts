@@ -4,7 +4,7 @@ export default function arrayFilterUnique<T>(selector: (i: T) => string | number
 		throw new Error('array-filter-unique has to be called as a function like `array.filter(arrayFilterUnique(<optional arg>))`');
 	}
 
-	const seen: {[key: string]: boolean} = {};
+	const seen: Record<string | number, boolean> = {};
 	return (element: T) => {
 		const toBeSearched = selector(element);
 
@@ -15,5 +15,6 @@ export default function arrayFilterUnique<T>(selector: (i: T) => string | number
 }
 
 // For CommonJS default export support
+/* eslint @typescript-eslint/no-unsafe-member-access: off */
 module.exports = arrayFilterUnique;
 module.exports.default = arrayFilterUnique;

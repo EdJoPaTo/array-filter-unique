@@ -59,5 +59,5 @@ test('hint user when not used as a function', t => {
 	const data = ['a', 'b', 'a', 'c'];
 	t.throws(() => {
 		data.filter(arrayFilterUnique as any);
-	}, /has to be called as a function/);
+	}, {message: /has to be called as a function/});
 });

@@ -5,22 +5,22 @@
 	"license": "MIT",
 	"repository": "EdJoPaTo/array-filter-unique",
 	"author": {
-		"name": "Edgar Toll",
+		"name": "EdJoPaTo",
 		"email": "edjopato@gmail.com",
-		"url": "edjopato.de"
+		"url": "https://edjopato.de"
 	},
 	"engines": {
 		"node": ">=8"
 	},
 	"scripts": {
-		"build": "del dist && tsc",
+		"build": "del-cli dist && tsc",
 		"prepack": "npm run build",
-		"test": "xo && nyc ava"
+		"test": "tsc --sourceMap && xo && nyc ava"
 	},
-	"main": "dist",
-	"types": "dist",
+	"main": "dist/source",
+	"types": "dist/source",
 	"files": [
-		"dist",
+		"dist/source",
 		"!*.test.*"
 	],
 	"keywords": [
@@ -32,33 +32,21 @@
 	],
 	"dependencies": {},
 	"devDependencies": {
-		"@sindresorhus/tsconfig": "^0.4.0",
-		"@types/node": "^12.0.7",
-		"@typescript-eslint/eslint-plugin": "^1.13.0",
-		"@typescript-eslint/parser": "^1.13.0",
-		"ava": "^2.1.0",
-		"del-cli": "^2.0.0",
-		"eslint-config-xo-typescript": "^0.15.0",
-		"nyc": "^14.1.1",
+		"@sindresorhus/tsconfig": "^0.7.0",
+		"@types/node": "^13.11.1",
+		"ava": "^3.7.0",
+		"del-cli": "^3.0.0",
+		"nyc": "^15.0.1",
 		"ts-node": "^8.0.2",
 		"typescript": "^3.3.3",
-		"xo": "^0.24.0"
-	},
-	"ava": {
-		"babel": false,
-		"compileEnhancements": false,
-		"extensions": [
-			"ts"
-		],
-		"require": [
-			"ts-node/register"
-		]
+		"xo": "^0.29.1"
 	},
 	"nyc": {
 		"extension": [
 			".ts"
 		],
 		"include": [
+			"dist/source",
 			"source"
 		],
 		"exclude": [
@@ -71,14 +59,20 @@
 		]
 	},
 	"xo": {
-		"extends": "xo-typescript",
-		"extensions": [
-			"ts"
-		],
 		"rules": {
 			"import/named": "warn",
-			"@typescript-eslint/promise-function-async": "off",
 			"ava/no-ignored-test-files": "off"
-		}
+		},
+		"overrides": [
+			{
+				"files": [
+					"**/*.test.*",
+					"test/**/*.*"
+				],
+				"rules": {
+					"@typescript-eslint/prefer-readonly-parameter-types": "off"
+				}
+			}
+		]
 	}
 }
