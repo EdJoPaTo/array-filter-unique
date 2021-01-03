@@ -59,7 +59,7 @@ test('hint user when not used as a function', t => {
 	const data = ['a', 'b', 'a', 'c'];
 	t.throws(() => {
 		// @ts-expect-error
-		// eslint-disable-next-line unicorn/no-fn-reference-in-iterator
+		// eslint-disable-next-line unicorn/no-array-callback-reference
 		data.filter(arrayFilterUnique);
 	}, {message: /has to be called as a function/});
 });
