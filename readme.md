@@ -39,8 +39,3 @@ const arrayFilterUnique = require('array-filter-unique');
 Type: `item => string`
 
 Select what to check in the given item
-
-
-## License
-
-MIT © [Edgar Toll](https://edjopato.de)
