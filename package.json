@@ -2,27 +2,6 @@
 	"name": "array-filter-unique",
 	"version": "2.2.0",
 	"description": "JavaScript array.filter() compatible unique filter",
-	"license": "MIT",
-	"repository": "EdJoPaTo/array-filter-unique",
-	"author": {
-		"name": "EdJoPaTo",
-		"email": "array-filter-unique-npm-package@edjopato.de",
-		"url": "https://edjopato.de"
-	},
-	"engines": {
-		"node": ">=10"
-	},
-	"scripts": {
-		"build": "del-cli dist && tsc",
-		"prepack": "npm run build",
-		"test": "tsc --sourceMap && xo && nyc ava"
-	},
-	"main": "dist/source",
-	"types": "dist/source",
-	"files": [
-		"dist/source",
-		"!*.test.*"
-	],
 	"keywords": [
 		"array",
 		"arr",
@@ -30,6 +9,21 @@
 		"unique",
 		"duplicate"
 	],
+	"license": "MIT",
+	"repository": "EdJoPaTo/array-filter-unique",
+	"author": {
+		"name": "EdJoPaTo",
+		"email": "array-filter-unique-npm-package@edjopato.de",
+		"url": "https://edjopato.de"
+	},
+	"scripts": {
+		"build": "del-cli dist && tsc",
+		"prepack": "npm run build",
+		"test": "tsc --sourceMap && xo && nyc ava"
+	},
+	"engines": {
+		"node": ">=10"
+	},
 	"dependencies": {},
 	"devDependencies": {
 		"@sindresorhus/tsconfig": "^0.8.0",
@@ -40,7 +34,14 @@
 		"typescript": "^4.1.2",
 		"xo": "^0.38.1"
 	},
+	"files": [
+		"dist/source",
+		"!*.test.*"
+	],
+	"main": "dist/source",
+	"types": "dist/source",
 	"nyc": {
+		"all": true,
 		"extension": [
 			".ts"
 		],
@@ -49,9 +50,9 @@
 			"source"
 		],
 		"exclude": [
+			"**/*.d.ts",
 			"**/*.test.ts"
 		],
-		"all": true,
 		"reporter": [
 			"lcov",
 			"text"
