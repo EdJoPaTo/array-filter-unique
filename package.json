@@ -30,7 +30,7 @@
 		"@sindresorhus/tsconfig": "^1.0.2",
 		"@types/node": "^15.0.1",
 		"ava": "^3.7.0",
-		"del-cli": "^3.0.0",
+		"del-cli": "^4.0.0",
 		"nyc": "^15.0.1",
 		"typescript": "^4.2.3",
 		"xo": "^0.40.0"
