@@ -25,17 +25,17 @@ test('simple numbers with selector', t => {
 const testdata = [
 	{
 		name: 'A',
-		id: 1
+		id: 1,
 	}, {
 		name: 'B',
-		id: 2
+		id: 2,
 	}, {
 		name: 'C',
-		id: 1
+		id: 1,
 	}, {
 		name: 'D',
-		id: 3
-	}
+		id: 3,
+	},
 ];
 
 test('with selector', t => {
@@ -43,14 +43,14 @@ test('with selector', t => {
 	t.deepEqual(result, [
 		{
 			name: 'A',
-			id: 1
+			id: 1,
 		}, {
 			name: 'B',
-			id: 2
+			id: 2,
 		}, {
 			name: 'D',
-			id: 3
-		}
+			id: 3,
+		},
 	]);
 });
 
