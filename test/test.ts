@@ -58,7 +58,7 @@ test('hint user when not used as a function', t => {
 	// This will not work in TypeScript but may be done accidentally in JS
 	const data = ['a', 'b', 'a', 'c'];
 	t.throws(() => {
-		// @ts-expect-error
+		// @ts-expect-error typescript knows its not a function
 		// eslint-disable-next-line unicorn/no-array-callback-reference
 		data.filter(arrayFilterUnique);
 	}, {message: /has to be called as a function/});
