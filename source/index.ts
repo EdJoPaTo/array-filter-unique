@@ -15,7 +15,7 @@ export default function arrayFilterUnique<T>(selector: (i: T) => string | number
 }
 
 // For CommonJS default export support
-/* eslint-disable unicorn/prefer-module, @typescript-eslint/no-unsafe-member-access */
+/* eslint-disable unicorn/prefer-module */
 module.exports = arrayFilterUnique;
 module.exports.default = arrayFilterUnique;
 /* eslint-enable */
