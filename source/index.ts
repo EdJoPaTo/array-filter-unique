@@ -1,5 +1,5 @@
 // See: https://jsperf.com/array-filter-unique/13
-export default function arrayFilterUnique<T>(selector: (i: T) => string | number = o => String(o)): (element: T) => boolean {
+export default function arrayFilterUnique<T>(selector: (i: T) => string | number = String): (element: T) => boolean {
 	if (arguments.length > 1) {
 		throw new Error('array-filter-unique has to be called as a function like `array.filter(arrayFilterUnique(<optional arg>))`');
 	}
