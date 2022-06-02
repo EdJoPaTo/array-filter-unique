@@ -1,5 +1,7 @@
 // See: https://jsperf.com/array-filter-unique/13
-export default function arrayFilterUnique<T>(selector: (i: T) => string | number = String): (element: T) => boolean {
+export function arrayFilterUnique<T>(
+	selector: (i: T) => string | number = String,
+): (element: T) => boolean {
 	if (arguments.length > 1) {
 		throw new Error('array-filter-unique has to be called as a function like `array.filter(arrayFilterUnique(<optional arg>))`');
 	}
@@ -13,9 +15,3 @@ export default function arrayFilterUnique<T>(selector: (i: T) => string | number
 		return isNew;
 	};
 }
-
-// For CommonJS default export support
-/* eslint-disable unicorn/prefer-module */
-module.exports = arrayFilterUnique;
-module.exports.default = arrayFilterUnique;
-/* eslint-enable */

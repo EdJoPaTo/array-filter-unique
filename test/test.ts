@@ -1,5 +1,5 @@
 import test from 'ava';
-import arrayFilterUnique from '../source';
+import {arrayFilterUnique} from '../source/index.js';
 
 test('simple strings', t => {
 	const data = ['a', 'b', 'a', 'c'];

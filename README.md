@@ -16,7 +16,7 @@ npm install array-filter-unique
 ## Usage
 
 ```js
-const arrayFilterUnique = require('array-filter-unique');
+import {arrayFilterUnique} from 'array-filter-unique';
 
 ['a', 'a', 'b', 'c']
   .filter(arrayFilterUnique());
@@ -36,3 +36,12 @@ const arrayFilterUnique = require('array-filter-unique');
 Type: `item => string`
 
 Select what to check in the given item
+
+## Migrate from v2 to v3
+
+```diff
+-const arrayFilterUnique = require('array-filter-unique');
++import {arrayFilterUnique} from 'array-filter-unique';
+
+ someArray.filter(arrayFilterUnique());
+```
