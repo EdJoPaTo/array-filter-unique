@@ -1,8 +1,7 @@
 # array-filter-unique
+
 [![NPM Version](https://img.shields.io/npm/v/array-filter-unique.svg)](https://www.npmjs.com/package/array-filter-unique)
 [![node](https://img.shields.io/node/v/array-filter-unique.svg)](https://www.npmjs.com/package/array-filter-unique)
-[![Dependency Status](https://david-dm.org/EdJoPaTo/array-filter-unique/status.svg)](https://david-dm.org/EdJoPaTo/array-filter-unique)
-[![Dev Dependency Status](https://david-dm.org/EdJoPaTo/array-filter-unique/dev-status.svg)](https://david-dm.org/EdJoPaTo/array-filter-unique?type=dev)
 
 > JavaScript array.filter() compatible unique filter
 
@@ -10,10 +9,9 @@ As all unique libraries are used as a function and not within the easily stackab
 
 ## Install
 
+```bash
+npm install array-filter-unique
 ```
-$ npm install array-filter-unique
-```
-
 
 ## Usage
 
@@ -28,7 +26,6 @@ const arrayFilterUnique = require('array-filter-unique');
   .filter(arrayFilterUnique(o => o.name));
 //=> [{name: 'Alice', …}, {name: 'Peter', …}]
 ```
-
 
 ## API
 
