@@ -1,6 +1,6 @@
 {
 	"name": "array-filter-unique",
-	"version": "2.2.0",
+	"version": "3.0.0",
 	"description": "JavaScript array.filter() compatible unique filter",
 	"keywords": [
 		"array",
