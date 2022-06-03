@@ -36,8 +36,12 @@
 		"dist/source",
 		"!*.test.*"
 	],
-	"main": "dist/source/index.js",
-	"types": "dist/source/index.d.ts",
+	"exports": {
+		".": {
+			"types": "./dist/source/index.d.ts",
+			"default": "./dist/source/index.js"
+		}
+	},
 	"xo": {
 		"rules": {
 			"@typescript-eslint/prefer-readonly-parameter-types": "error",
