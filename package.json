@@ -10,7 +10,10 @@
 		"duplicate"
 	],
 	"license": "MIT",
-	"repository": "EdJoPaTo/array-filter-unique",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/EdJoPaTo/array-filter-unique.git"
+	},
 	"author": {
 		"name": "EdJoPaTo",
 		"email": "array-filter-unique-npm-package@edjopato.de",
@@ -19,7 +22,7 @@
 	"scripts": {
 		"build": "del-cli dist && tsc",
 		"prepack": "npm run build",
-		"test": "tsc --sourceMap && xo && ava"
+		"test": "tsc --sourceMap && xo && c8 --all ava"
 	},
 	"type": "module",
 	"engines": {
@@ -28,6 +31,7 @@
 	"devDependencies": {
 		"@sindresorhus/tsconfig": "^4.0.0",
 		"ava": "^5.0.1",
+		"c8": "^8.0.1",
 		"del-cli": "^5.0.0",
 		"typescript": "^5.0.2",
 		"xo": "^0.55.1"
