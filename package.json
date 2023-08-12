@@ -26,11 +26,11 @@
 		"node": ">=14"
 	},
 	"devDependencies": {
-		"@sindresorhus/tsconfig": "^3.0.0",
+		"@sindresorhus/tsconfig": "^4.0.0",
 		"ava": "^5.0.1",
 		"del-cli": "^5.0.0",
 		"typescript": "^5.0.2",
-		"xo": "^0.54.0"
+		"xo": "^0.55.1"
 	},
 	"files": [
 		"dist/source",
