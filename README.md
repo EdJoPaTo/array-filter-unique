@@ -5,7 +5,8 @@
 
 > JavaScript array.filter() compatible unique filter
 
-As all unique libraries are used as a function and not within the easily stackable and immutable arr.format() style I made my own.
+As all unique libraries are used as a function and not within the easily
+stackable and immutable arr.format() style I made my own.
 
 ## Install
 
