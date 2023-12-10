@@ -5,8 +5,8 @@
 		"test"
 	],
 	"compilerOptions": {
-		"target": "ES2015",
-		"lib": ["ES2015"],
+		"lib": ["ES2019"],
+		"target": "ES2019", // Node.js 12
 		"outDir": "dist"
 	}
 }
