@@ -12,7 +12,7 @@
 	"license": "MIT",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/EdJoPaTo/array-filter-unique.git"
+		"url": "git+https://github.com/EdJoPaTo/array-filter-unique.git"
 	},
 	"author": {
 		"name": "EdJoPaTo",
