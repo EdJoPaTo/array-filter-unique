@@ -16,47 +16,27 @@
 	},
 	"author": {
 		"name": "EdJoPaTo",
-		"email": "array-filter-unique-npm-package@edjopato.de",
+		"email": "array-filter-unique-typescript-package@edjopato.de",
 		"url": "https://edjopato.de"
 	},
 	"scripts": {
-		"build": "del-cli dist && tsc",
-		"prepack": "npm run build",
-		"test": "tsc --sourceMap && xo && c8 --all node --test --enable-source-maps"
+		"prepare": "deno2node",
+		"pretest": "deno2node",
+		"test": "node --test"
 	},
 	"type": "module",
 	"engines": {
 		"node": ">=12"
 	},
 	"devDependencies": {
-		"@sindresorhus/tsconfig": "^5.0.0",
 		"@types/node": "^18.19.3",
-		"c8": "^9.0.0",
-		"del-cli": "^5.0.0",
-		"typescript": "^5.0.2",
-		"xo": "^0.56.0"
+		"deno2node": "1.11.0"
 	},
 	"files": [
 		"dist",
 		"!*.test.*",
 		"!test.*"
 	],
-	"main": "./dist/index.js",
-	"types": "./dist/index.d.ts",
-	"xo": {
-		"rules": {
-			"@typescript-eslint/prefer-readonly-parameter-types": "error"
-		},
-		"overrides": [
-			{
-				"files": [
-					"**/*.test.*",
-					"**/test.*"
-				],
-				"rules": {
-					"@typescript-eslint/prefer-readonly-parameter-types": "off"
-				}
-			}
-		]
-	}
+	"main": "./dist/mod.js",
+	"types": "./dist/mod.d.ts"
 }

@@ -2,6 +2,7 @@
 
 [![NPM Version](https://img.shields.io/npm/v/array-filter-unique.svg)](https://www.npmjs.com/package/array-filter-unique)
 [![node](https://img.shields.io/node/v/array-filter-unique.svg)](https://www.npmjs.com/package/array-filter-unique)
+[![deno module](https://shield.deno.dev/x/array_filter_unique)](https://deno.land/x/array_filter_unique)
 
 > JavaScript array.filter() compatible unique filter
 
@@ -10,14 +11,22 @@ stackable and immutable arr.format() style I made my own.
 
 ## Install
 
+Node.js:
+
 ```bash
 npm install array-filter-unique
+```
+
+Deno:
+
+```ts
+import {/* ... */} from "https://deno.land/x/array_filter_unique/mod.ts";
 ```
 
 ## Usage
 
 ```js
-import {arrayFilterUnique} from 'array-filter-unique';
+import { arrayFilterUnique } from "array-filter-unique";
 
 ['a', 'a', 'b', 'c']
   .filter(arrayFilterUnique());
@@ -27,16 +36,6 @@ import {arrayFilterUnique} from 'array-filter-unique';
   .filter(arrayFilterUnique(o => o.name));
 //=> [{name: 'Alice', …}, {name: 'Peter', …}]
 ```
-
-## API
-
-### arrayFilterUnique([selector])
-
-#### selector
-
-Type: `item => string`
-
-Select what to check in the given item
 
 ## Migrate from v2 to v3
 

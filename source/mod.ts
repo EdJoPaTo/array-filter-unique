@@ -11,7 +11,7 @@ export function arrayFilterUnique<T>(
 ): (element: T) => boolean {
 	if (arguments.length > 1) {
 		throw new Error(
-			'array-filter-unique has to be called as a function like `array.filter(arrayFilterUnique(<optional arg>))`',
+			"array-filter-unique has to be called as a function like `array.filter(arrayFilterUnique(<optional arg>))`",
 		);
 	}
 
