@@ -2,7 +2,8 @@
 
 [![NPM Version](https://img.shields.io/npm/v/array-filter-unique.svg)](https://www.npmjs.com/package/array-filter-unique)
 [![node](https://img.shields.io/node/v/array-filter-unique.svg)](https://www.npmjs.com/package/array-filter-unique)
-[![deno module](https://shield.deno.dev/x/array_filter_unique)](https://deno.land/x/array_filter_unique)
+[![JSR Version](https://jsr.io/badges/@edjopato/array-filter-unique)](https://jsr.io/@edjopato/array-filter-unique)
+[![JSR Score](https://jsr.io/badges/@edjopato/array-filter-unique/score)](https://jsr.io/@edjopato/array-filter-unique/score)
 
 > JavaScript array.filter() compatible unique filter
 
@@ -19,13 +20,13 @@ npm install array-filter-unique
 
 Deno:
 
-```ts
-import {/* ... */} from "https://deno.land/x/array_filter_unique/mod.ts";
+```bash
+deno add @edjopato/array-filter-unique
 ```
 
 ## Usage
 
-```js
+```ts
 import { arrayFilterUnique } from "array-filter-unique";
 
 ['a', 'a', 'b', 'c']
