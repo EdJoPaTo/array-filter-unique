@@ -29,13 +29,13 @@ deno add @edjopato/array-filter-unique
 ```ts
 import { arrayFilterUnique } from "array-filter-unique";
 
-['a', 'a', 'b', 'c']
-  .filter(arrayFilterUnique());
-//=> ['a', 'b', 'c']
+["a", "a", "b", "c"]
+	.filter(arrayFilterUnique());
+//=> ["a", "b", "c"]
 
-[{name: 'Alice', …}, {name: 'Peter', …}, {name: 'Alice', …}}]
-  .filter(arrayFilterUnique(o => o.name));
-//=> [{name: 'Alice', …}, {name: 'Peter', …}]
+[{ name: "Alice" }, { name: "Peter" }, { name: "Alice" }]
+	.filter(arrayFilterUnique((o) => o.name));
+//=> [{name: "Alice"}, {name: "Peter"}]
 ```
 
 ## Migrate from v2 to v3
