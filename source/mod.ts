@@ -2,8 +2,10 @@
 /** Filter an array to only contain unique items.
  * @argument selector Select what to compare on each given item. Defaults to the item itself.
  * @example
+ * ```ts
  * [1, 2, 1, 3].filter(arrayFilterUnique())
  * // returns [1, 2, 3]
+ * ```
  * @returns The actual filter function to be used with `array.filter(<here>)`.
  */
 export function arrayFilterUnique<T>(
